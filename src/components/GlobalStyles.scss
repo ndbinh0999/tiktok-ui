@@ -23,3 +23,13 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
 }
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+a[href] {
+    color: var(--text- color);
+    text-decoration: none;
+}
