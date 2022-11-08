@@ -2,22 +2,26 @@ import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import images from '../../../../assets/images';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faMagnifyingGlass, faSignIn, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { wrapper as PopperWrapper } from '../Popper';
 import AccountItem from '../AccountItem';
+import Button from '../Button';
 
 const cx = classNames.bind(styles);
 
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
+    const [keySearch, setKeySearch] = useState('');
 
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResult([1, 2, 3]);
-        }, 3000);
-    }, []);
+    const searchSubmit = () => {
+        setSearchResult([1]);
+    };
+    const clearSubmit = () => {
+        setSearchResult([]);
+        setKeySearch('');
+    };
 
     return (
         <header className={cx('wrapper')}>
@@ -34,26 +38,42 @@ function Header() {
                             <PopperWrapper>
                                 <h4 className={cx('search-title')}>Accounts</h4>
                                 <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
                             </PopperWrapper>
                         </div>
                     )}
                 >
                     <div className={cx('search')}>
-                        <input placeholder="Tìm kiếm tài khoản và video" spellCheck={false} />
+                        <input
+                            placeholder="Tìm kiếm tài khoản và video"
+                            spellCheck={false}
+                            value={keySearch}
+                            onChange={(e) => {
+                                setKeySearch(e.target.value);
+                            }}
+                        />
                         <button className={cx('loading')}>
                             <FontAwesomeIcon icon={faSpinner} />
                         </button>
-                        <button className={cx('clear')}>
+                        <button className={cx('clear')} onClick={clearSubmit}>
                             <FontAwesomeIcon icon={faCircleXmark} />
                         </button>
-                        <button className={cx('search-btn')}>
+                        <button className={cx('search-btn')} onClick={searchSubmit}>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>
                     </div>
                 </Tippy>
-                <div className={cx('actions')}></div>
+                <div className={cx('actions')}>
+                    <Button text>Register</Button>
+                    <Button
+                        primary
+                        // rightIcon={<FontAwesomeIcon icon={faSignIn} />}
+                        onClick={() => {
+                            alert();
+                        }}
+                    >
+                        Log in
+                    </Button>
+                </div>
             </div>
         </header>
     );

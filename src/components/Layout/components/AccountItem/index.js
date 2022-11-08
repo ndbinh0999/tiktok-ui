@@ -10,7 +10,7 @@ function AccountItem() {
             <div className={cx('wrapper')}>
                 <img
                     className={cx('avatar')}
-                    src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/5a671c4c3a5cced2e0a5109bd9818b60~c5_300x300.webp?x-expires=1667718000&x-signature=pT%2FkK9txpp30rZogyk2rirZjhiA%3D"
+                    src="https://upanh123.com/wp-content/uploads/2020/10/4529dd12ae7811705351b516039135d7.jpg"
                     alt=""
                 />
                 <div className={cx('info')}>
@@ -22,9 +22,19 @@ function AccountItem() {
                 </div>
             </div>
             <div className={cx('wrapper')}>
+                <img className={cx('avatar')} src="https://hoc24.vn/images/avt/avt2814693_256by256.jpg" alt="" />
+                <div className={cx('info')}>
+                    <p className={cx('name')}>
+                        <h4>Cao Mai</h4>
+                        <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
+                    </p>
+                    <span className={cx('username')}>maimoonK5</span>
+                </div>
+            </div>
+            <div className={cx('wrapper')}>
                 <img
                     className={cx('avatar')}
-                    src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/fe98319cc3817a148c440beb9bdf39e4~c5_300x300.webp?x-expires=1667721600&x-signature=H7p9T%2BYaR9Opt1qHg%2BfatyJR7UU%3D"
+                    src="https://vcdn1-ngoisao.vnecdn.net/2022/02/16/truong-tu-phong-3-5820-1645003544.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=zd75ycN6shrnp8adcewYoA"
                     alt=""
                 />
                 <div className={cx('info')}>
