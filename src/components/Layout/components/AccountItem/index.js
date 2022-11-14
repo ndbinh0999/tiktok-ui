@@ -14,20 +14,20 @@ function AccountItem() {
                     alt=""
                 />
                 <div className={cx('info')}>
-                    <p className={cx('name')}>
+                    <span className={cx('name')}>
                         <h4>Nguyễn Bình</h4>
                         <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
-                    </p>
+                    </span>
                     <span className={cx('username')}>nguyenbinh99</span>
                 </div>
             </div>
             <div className={cx('wrapper')}>
                 <img className={cx('avatar')} src="https://hoc24.vn/images/avt/avt2814693_256by256.jpg" alt="" />
                 <div className={cx('info')}>
-                    <p className={cx('name')}>
+                    <span className={cx('name')}>
                         <h4>Cao Mai</h4>
                         <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
-                    </p>
+                    </span>
                     <span className={cx('username')}>maimoonK5</span>
                 </div>
             </div>
@@ -38,10 +38,10 @@ function AccountItem() {
                     alt=""
                 />
                 <div className={cx('info')}>
-                    <p className={cx('name')}>
+                    <span className={cx('name')}>
                         <h4>Cao Hương</h4>
                         <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
-                    </p>
+                    </span>
                     <span className={cx('username')}>cthuongK9</span>
                 </div>
             </div>
